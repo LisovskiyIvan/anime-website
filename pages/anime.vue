@@ -1,5 +1,5 @@
 <template>
     <div>
-       HOME PAGE
+        anime page
     </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
     <div>
-       HOME PAGE
+        random animme
     </div>
 </template>
