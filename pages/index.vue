@@ -1,5 +1,5 @@
 <template>
     <div>
-       HOME PAGE
+       <Carousel />
     </div>
 </template>
