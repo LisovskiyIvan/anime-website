@@ -1,28 +1,19 @@
 <template>
-    <div>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-            <NuxtLink class="navbar-brand" to="/">Zotov`s anime</NuxtLink>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <NuxtLink active-class="active" class="nav-link" aria-current="page" :to="item.path" v-for="(item, index) in routes" :key="index">{{ item.name }}</NuxtLink>
-            </div>
-            </div>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Найти" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Найти</button>
-            </form>
-            <button type="button" class="btn" :class="{'btn-light': switcher, 'btn-dark': !switcher}">Light</button>
-        </div>
-        </nav>
+  <div class="wrapper">
+    <ul class="nav">
+      <li class="nav-item" v-for="(item, index) in routes" :key="index">
+        <NuxtLink active-class="active" :to="item.path" class="nav-link" aria-current="page">{{ item.name }}</NuxtLink>
+      </li>
+    </ul>
+    <div class="login">
+      <button type="button" class="btn btn-outline-primary">Войти</button>
+      <button type="button" class="btn btn-outline-secondary">Регистрация</button>
     </div>
+  </div>
 </template>
 
 <script setup>
-    const routes = [
+const routes = [
   {
     path: '/',
     name: 'Главная'
@@ -41,9 +32,66 @@
   }
 ]
 
-let switcher = true;
 </script>
 
-<style>
-  
+<style scoped>
+.wrapper {
+  width: 80vw;
+  margin-left: 10vw;
+  display: flex;
+  justify-content: space-between;
+  font-family: nunito;
+  padding-top: 20px;
+}
+
+ul {
+  margin: 0px;
+}
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: #EFBCD5;
+  font-size: 18px;
+}
+
+.nav-link:hover {
+  color: #EFBCD5;
+}
+
+.nav-link:hover::after {
+  transform-origin: right;
+  transform: scaleX(1);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  border-radius: 5px;
+  left: 0;
+  bottom: -6px;
+  transform: scaleX(0);
+  transition: 0.5s;
+}
+.login {
+  font-size: 16px;
+}
+.btn-outline-primary {
+  margin-right: 20px;
+  color: #EFBCD5;
+  border-color: #EFBCD5;
+}
+
+.btn-outline-primary:hover {
+  background-color: #EFBCD5;
+  color: black;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #EFBCD5;
+  color: black;
+}
 </style>
