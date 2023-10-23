@@ -40,7 +40,7 @@ const routes = [
   margin-left: 10vw;
   display: flex;
   justify-content: space-between;
-  font-family: nunito;
+  font-family: 'Nunito', sans-serif;
   padding-top: 20px;
 }
 

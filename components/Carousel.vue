@@ -39,7 +39,6 @@ const modules = [Autoplay, Pagination]
 <style scoped>
 .container-carousel {
     height: auto;
-    margin-top: 50px;
     display: flex;
     justify-content: center;
 }

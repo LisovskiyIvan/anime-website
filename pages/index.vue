@@ -1,27 +1,88 @@
 <template>
-    <div class="wrap">
-        <Navigation />
-        <div class="heading">
-            ANIZIGLER
+    <div class="wrapFirstPage">
+        <div class="headline bg-dark">
+            <Navigation />
+            <div class="heading rose">
+                ANIZIGLER
+            </div>
+        </div>
+        <div class="paragraph bg-rose">
+            <div class="textContainer">
+                <div class="headBlock">
+                    <h4>Аниме вселенная ждет вас</h4>
+                </div>
+                <div class="textBlock">
+                    <p>Погружайтесь в захватывающий мир аниме сериалов. Тысячи приключений на любой вкус от разбивающей
+                        сердце драмы до захватывающих приключений</p>
+                </div>
+            </div>
         </div>
     </div>
-    <Carousel />
+    <div class="wrapSecondPage bg-dark">
+        <h1 class="rose headingFont">Новинки недели</h1>
+        <Carousel />
+    </div>
 </template>
 
 <style scoped>
-.wrap {
+.wrapFirstPage, .wrapSecondPage{
     width: 100%;
     height: 100vh;
-    background-color: #403F4C;
+
 }
+
+.headline {
+    height: 55vh;
+}
+
+.paragraph {
+    width: 100%;
+    height: 625.5px;
+    justify-content: center;
+}
+
 .heading {
-    color: #EFBCD5;
     display: flex;
     justify-content: center;
     font-size: 261px;
     align-items: center;
-    font-family: Elasie;
-    margin-top: 261.25px;
+    font-family: 'Elsie', serif;
+    /* margin-top: 261.25px; */
     cursor: default;
+}
+
+.paragraph {
+    display: flex;
+    height: 45vh;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+}
+
+.textContainer {
+    display: flex;
+    height: 120px;
+    width: 75%;
+    justify-content: center;
+}
+
+h4 {
+    font-size: 50px;
+    font-family: 'Elsie', serif;
+}
+
+p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 30px;
+}
+.headBlock {
+    display: flex;
+}
+.textBlock {
+    display: flex;
+    width: 80%;
+}
+h1 {
+    padding: 50px;
 }
 </style>
