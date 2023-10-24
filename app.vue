@@ -31,10 +31,23 @@ useHead({
 .rose {
   color: #EFBCD5;
 }
+.white {
+  color: #fff;
+}
 .headingFont {
   font-family: 'Elsie', serif;
 }
 .textFont {
   font-family: 'Nunito', sans-serif;
+}
+.btn-outline-primary {
+  margin-right: 20px;
+  color: #EFBCD5;
+  border-color: #EFBCD5;
+}
+
+.btn-outline-primary:hover {
+  background-color: #EFBCD5;
+  color: black;
 }
 </style>

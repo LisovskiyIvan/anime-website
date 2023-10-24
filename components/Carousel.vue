@@ -1,7 +1,7 @@
 <template>
     <div class="container-carousel">
         <div class="wrapper">
-            <Swiper :modules="modules" :slides-per-view="5" :space-between="10" :loop="false"
+            <Swiper :modules="modules" :slides-per-view="4" :space-between="10" :loop="false"
                 :autoplay="{ delay: 2500, disableOnInteraction: false }">
                 <SwiperSlide v-for="text in swiperText" :key="text.description">
                     <div class="card">

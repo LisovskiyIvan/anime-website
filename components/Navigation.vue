@@ -27,6 +27,10 @@ const routes = [
     name: 'Случайное аниме'
   },
   {
+    path: '/top',
+    name: 'Топ 100'
+  },
+  {
     path: '/about',
     name: 'О нас'
   }
@@ -79,17 +83,6 @@ ul {
 .login {
   font-size: 16px;
 }
-.btn-outline-primary {
-  margin-right: 20px;
-  color: #EFBCD5;
-  border-color: #EFBCD5;
-}
-
-.btn-outline-primary:hover {
-  background-color: #EFBCD5;
-  color: black;
-}
-
 .btn-outline-secondary:hover {
   background-color: #EFBCD5;
   color: black;

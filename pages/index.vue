@@ -22,6 +22,10 @@
         <h1 class="rose headingFont">Новинки недели</h1>
         <Carousel />
     </div>
+    <div class="wrapThirdPage bg-rose">
+        <h1 class="white">Последние аниме</h1>
+        <AnimeCardContainer />
+    </div>
 </template>
 
 <style scoped>
@@ -29,6 +33,10 @@
     width: 100%;
     height: 100vh;
 
+}
+.wrapThirdPage {
+    width: 100%;
+    height: auto;
 }
 
 .headline {
