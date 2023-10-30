@@ -1,6 +1,7 @@
 <template>
   <div>
     <NuxtPage />
+    <LoginModal v-model="isOpen" @openLogin="isOpen.value = true" @closeLogin="isOpen.value = false"/>
   </div>
 </template>
 
@@ -13,10 +14,12 @@ useHead({
   title: 'Аниме вебсайт'
 }
 )
+const isOpen = ref(false)
+
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Elsie&family=Geologica:wght@300;400;700&family=Nunito:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Enriqueta&family=Geologica:wght@300;400;700&family=Nunito:wght@200;300;400&display=swap');
 
 * {
   margin: 0;
@@ -28,6 +31,9 @@ useHead({
 .bg-dark {
   background-color: #403F4C;
 }
+.dark {
+  color: #403F4C;
+}
 .rose {
   color: #EFBCD5;
 }
@@ -35,7 +41,7 @@ useHead({
   color: #fff;
 }
 .headingFont {
-  font-family: 'Elsie', serif;
+  font-family: 'Enriqueta', serif;
 }
 .textFont {
   font-family: 'Nunito', sans-serif;

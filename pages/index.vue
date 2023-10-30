@@ -3,9 +3,11 @@
         <div class="headline bg-dark">
             <Navigation />
             <div class="heading rose">
-                ANIZIGLER
+                ANIZIGA
             </div>
+            
         </div>
+        
         <div class="paragraph bg-rose">
             <div class="textContainer">
                 <div class="headBlock">
@@ -23,10 +25,17 @@
         <Carousel />
     </div>
     <div class="wrapThirdPage bg-rose">
-        <h1 class="white">Последние аниме</h1>
+        <h1 class="dark headingFont">Последние аниме</h1>
         <AnimeCardContainer />
     </div>
+    <div class="footer bg-dark">
+        <Footer />
+    </div>
 </template>
+
+<script setup>
+
+</script>
 
 <style scoped>
 .wrapFirstPage, .wrapSecondPage{
@@ -37,6 +46,7 @@
 .wrapThirdPage {
     width: 100%;
     height: auto;
+    padding-bottom: 25px;
 }
 
 .headline {
@@ -93,4 +103,8 @@ p {
 h1 {
     padding: 50px;
 }
+.footer {
+        width: 100%;
+        height: 75px;
+    }
 </style>
