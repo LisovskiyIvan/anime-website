@@ -1,7 +1,6 @@
 <template>
   <div>
     <NuxtPage />
-    <LoginModal v-model="isOpen" @openLogin="isOpen.value = true" @closeLogin="isOpen.value = false"/>
   </div>
 </template>
 
@@ -14,7 +13,6 @@ useHead({
   title: 'Аниме вебсайт'
 }
 )
-const isOpen = ref(false)
 
 </script>
 
@@ -25,27 +23,35 @@ const isOpen = ref(false)
   margin: 0;
   padding: 0;
 }
+
 .bg-rose {
   background-color: #EFBCD5;
 }
+
 .bg-dark {
   background-color: #403F4C;
 }
+
 .dark {
   color: #403F4C;
 }
+
 .rose {
   color: #EFBCD5;
 }
+
 .white {
   color: #fff;
 }
+
 .headingFont {
   font-family: 'Enriqueta', serif;
 }
+
 .textFont {
   font-family: 'Nunito', sans-serif;
 }
+
 .btn-outline-primary {
   margin-right: 20px;
   color: #EFBCD5;

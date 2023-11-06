@@ -5,9 +5,7 @@
             <div class="heading rose">
                 ANIZIGA
             </div>
-            
         </div>
-        
         <div class="paragraph bg-rose">
             <div class="textContainer">
                 <div class="headBlock">
@@ -38,11 +36,13 @@
 </script>
 
 <style scoped>
-.wrapFirstPage, .wrapSecondPage{
+.wrapFirstPage,
+.wrapSecondPage {
     width: 100%;
     height: 100vh;
 
 }
+
 .wrapThirdPage {
     width: 100%;
     height: auto;
@@ -93,18 +93,22 @@ p {
     font-family: 'Nunito', sans-serif;
     font-size: 30px;
 }
+
 .headBlock {
     display: flex;
 }
+
 .textBlock {
     display: flex;
     width: 80%;
 }
+
 h1 {
     padding: 50px;
 }
+
 .footer {
-        width: 100%;
-        height: 75px;
-    }
+    width: 100%;
+    height: 75px;
+}
 </style>

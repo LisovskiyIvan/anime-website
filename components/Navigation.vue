@@ -6,13 +6,14 @@
       </li>
     </ul>
     <div class="login">
-      <button type="button" class="btn btn-outline-primary" @click="$emit('openLogin')">Войти</button>
-      <button type="button" class="btn btn-outline-secondary">Регистрация</button>
+      <NuxtLink to="login"><button type="button" class="btn btn-outline-primary" >Войти</button></NuxtLink>
+      <NuxtLink to="register"><button type="button" class="btn btn-outline-secondary" >Регистрация</button></NuxtLink>
     </div>
   </div>
 </template>
 
 <script setup>
+
 
 const routes = [
   {

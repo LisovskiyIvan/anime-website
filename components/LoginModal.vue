@@ -1,7 +1,7 @@
 <template>
     <div class="modal-overlay">
         <div class="wrapper">
-            <button class="close btn btn-outline-secondary">Х</button>
+            <button class="close btn btn-outline-secondary" type="button">Х</button>
             <div class="form-box login">
                 <h2 class="headingFont">Войти</h2>
                 <form action="#" class="textFont">
@@ -19,7 +19,7 @@
                         </label>
                         <a href="#">Забыли пароль?</a>
                     </div>
-                    <button type="submit" class="btn btn-outline-primary" @click="$emit('closeLogin')">Войти</button>
+                    <button type="submit" class="btn btn-outline-primary">Войти</button>
                     <div class="login-register">
                         <p>Хотите зарегистрироваться? <a href="#" class="register-link">Регистрация</a></p>
                     </div>
