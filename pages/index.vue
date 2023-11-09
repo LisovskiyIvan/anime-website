@@ -24,7 +24,10 @@
     </div>
     <div class="wrapThirdPage bg-rose">
         <h1 class="dark headingFont">Последние аниме</h1>
-        <AnimeCardContainer />
+        <div class="flex">
+                <AnimeCardContainer />
+                <News />
+            </div>
     </div>
     <div class="footer bg-dark">
         <Footer />
@@ -110,5 +113,10 @@ h1 {
 .footer {
     width: 100%;
     height: 75px;
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 </style>

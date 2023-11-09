@@ -1,8 +1,14 @@
 <template>
-    <div class="wrap bg-dark">
-        <Navigation/>
-        <div class="main-content">
-        <AnimeCardContainer />
+    <div class="wrap">
+        <div class="bg-dark">
+            <Navigation />
+        </div>
+        <div class="main-content bg-rose">
+            <h1 class="headingFont heading">Топ 100 аниме</h1>
+            <div class="flex">
+                <AnimeCardContainer />
+                <News />
+            </div>
         </div>
     </div>
 </template>
@@ -12,7 +18,22 @@
     height: auto;
     width: 100%;
 }
+
+.bg-dark {
+    height: 10vh;
+}
+
 .main-content {
-    margin-top: 50px;
+    padding-top: 30px;
+}
+
+.heading {
+    margin: 0 0 20px 30px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 </style>
