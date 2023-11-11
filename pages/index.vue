@@ -3,8 +3,10 @@
         <div class="headline bg-dark">
             <Navigation />
             <div class="heading rose">
-                ANIZIGA
+                ANIBOOM
+
             </div>
+            <button>Fetch</button>
         </div>
         <div class="paragraph bg-rose">
             <div class="textContainer">
@@ -25,16 +27,17 @@
     <div class="wrapThirdPage bg-rose">
         <h1 class="dark headingFont">Последние аниме</h1>
         <div class="flex">
-                <AnimeCardContainer />
-                <News />
-            </div>
+            <AnimeCardContainer />
+            <News />
+        </div>
     </div>
     <div class="footer bg-dark">
         <Footer />
     </div>
 </template>
 
-<script setup>
+<script setup >
+
 
 </script>
 
@@ -114,6 +117,7 @@ h1 {
     width: 100%;
     height: 75px;
 }
+
 .flex {
     display: flex;
     justify-content: space-between;

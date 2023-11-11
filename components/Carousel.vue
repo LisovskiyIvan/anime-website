@@ -19,13 +19,13 @@
                 }
             }" :grab-cursor="true" :space-between="10" :loop="false"
                 :autoplay="{ delay: 2500, disableOnInteraction: false }">
-                <SwiperSlide v-for="text in swiperText" :key="text.description">
+                <SwiperSlide v-for="item in anime" :key="item.mal_id">
                     <div class="card">
                         <div class="cover">
-                            <img :src="text.image" alt="">
+                            <img class="img" :src="item.images.jpg.large_image_url" alt="">
                         </div>
-                        <h4>{{ text.title }}</h4>
-                        <p>{{ text.description }}</p>
+                        <h4>{{ item.title }}</h4>
+                        <p>{{ item.synopsis }}</p>
                     </div>
 
                 </SwiperSlide>
@@ -34,11 +34,17 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Autoplay, Pagination } from 'swiper/modules'
 import 'swiper/css';
-import { ref } from 'vue';
+
+const param: String = 'filter=upcoming'
+const { data: animes } = await useFetch('https://api.jikan.moe/v4/top/anime?filter=upcoming&limit=10')
+const anime: any[] = (animes.value as any).data
+
+console.log(anime)
+
 
 const swiperText = ref([
     { title: 'Наруто', description: 'крутой чел стновится хокаге и вообще всех трахает', image: 'img/photo.jpg' },
@@ -72,9 +78,9 @@ SwiperSlide {
     max-width: 300px;
 }
 
-img {
-    height: 300px;
-    width: auto;
+.img {
+    height: 400px;
+    width: 300px;
     position: relative;
     left: -1px;
     top: -1px;
@@ -84,7 +90,7 @@ img {
 
 .card {
     width: 300px;
-    height: 500px;
+    height: 600px;
 }
 
 h4,

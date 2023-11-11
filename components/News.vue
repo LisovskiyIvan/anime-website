@@ -1,18 +1,18 @@
 <template>
     <div class="card news textFont">
         <div class="new">
-            <h3 class="heading headingFont">Новость</h3>
+            <h3 class="heading headingFont">Тут будут новости</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, sint? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, voluptatibus. <a href="">читать далее..</a></p>
         </div>
         <div class="new">
-            <h3 class="heading headingFont">Украли трусы</h3>
+            <h3 class="heading headingFont">И тут тоже</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, sint? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, voluptatibus. <a href="">читать далее..</a></p>
         </div>
         <div class="new">
-            <h3 class="heading headingFont">хуй пососи</h3>
+            <h3 class="heading headingFont">Бэкенд для сайта никто не пишет</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, sint? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, voluptatibus. <a href="">читать далее..</a></p>
         </div><div class="new">
-            <h3 class="heading headingFont">Маргинштеен</h3>
+            <h3 class="heading headingFont">Тогда я сам напишу</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, sint? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, voluptatibus. <a href="">читать далее..</a></p>
         </div>
         

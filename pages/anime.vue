@@ -7,7 +7,6 @@
             <h1 class="headingFont heading">Топ 100 аниме</h1>
             <div class="flex">
                 <AnimeCardContainer />
-                <News />
             </div>
         </div>
     </div>
