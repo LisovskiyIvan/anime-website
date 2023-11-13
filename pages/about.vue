@@ -181,10 +181,10 @@ ul li a:hover span:nth-child(4) {
 }
 
 .facebook:hover {
-  color: #3b5998;
+  color: #c32aa3;
 }
 .facebook:hover span { 
-  background: #3b5998;
+  background: #c32aa3;
 }
 .twitter:hover {
   color: #1da1f2;
@@ -199,10 +199,10 @@ ul li a:hover span:nth-child(4) {
   background: #c32aa3;
 }
 .google:hover {
-  color: #dd4b39;
+  color: #1da1f2;
 }
 .google:hover span { 
-  background: #dd4b39;
+  background: #1da1f2;
 }
 ul li a .twitter {
   color: #1da1f2;
