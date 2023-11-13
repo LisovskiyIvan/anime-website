@@ -9,7 +9,7 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, sint? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, voluptatibus. <a href="">читать далее..</a></p>
         </div>
         <div class="new">
-            <h3 class="heading headingFont">Бэкенд для сайта никто не пишет</h3>
+            <h3 class="heading headingFont">АРТЕМ ПИШЫТ БЕКНД</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, sint? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, voluptatibus. <a href="">читать далее..</a></p>
         </div><div class="new">
             <h3 class="heading headingFont">Тогда я сам напишу</h3>

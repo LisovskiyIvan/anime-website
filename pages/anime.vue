@@ -4,13 +4,21 @@
             <Navigation />
         </div>
         <div class="main-content bg-rose">
-            <h1 class="headingFont heading">Топ 100 аниме</h1>
+            <h1 class="headingFont heading">Аниме</h1>
             <div class="flex">
-                <AnimeCardContainer />
+                <AnimeCardContainer :queryParam="queryParam"/>
+                <Filters />
             </div>
         </div>
     </div>
 </template>
+
+<script setup lang="ts">
+ const queryParam: Object = {
+    filter: 'bypopularity',
+    limit: 25
+ }
+</script>
 
 <style scoped>
 .wrap {

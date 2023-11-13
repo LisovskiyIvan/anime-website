@@ -1,6 +1,6 @@
 <template>
     <Navigation />
     <div>
-        top 100 page
+        discover anime by screenshot page
     </div>
 </template>

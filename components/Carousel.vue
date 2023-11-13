@@ -25,7 +25,7 @@
                             <img class="img" :src="item.images.jpg.large_image_url" alt="">
                         </div>
                         <h4>{{ item.title }}</h4>
-                        <p>{{ item.synopsis }}</p>
+                        <p class="text">{{ item.synopsis }}</p>
                     </div>
 
                 </SwiperSlide>
@@ -39,11 +39,8 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Autoplay, Pagination } from 'swiper/modules'
 import 'swiper/css';
 
-const param: String = 'filter=upcoming'
 const { data: animes } = await useFetch('https://api.jikan.moe/v4/top/anime?filter=upcoming&limit=10')
 const anime: any[] = (animes.value as any).data
-
-console.log(anime)
 
 
 const swiperText = ref([
@@ -96,5 +93,10 @@ SwiperSlide {
 h4,
 p {
     margin: 10px;
+}
+.text {
+    overflow: hidden;
+    white-space: wrap;
+    text-overflow: ellipsis;
 }
 </style>

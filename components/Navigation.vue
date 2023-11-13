@@ -29,8 +29,8 @@ const routes = [
     name: 'Случайное аниме'
   },
   {
-    path: '/top',
-    name: 'Топ 100'
+    path: '/discover',
+    name: 'Определить аниме'
   },
   {
     path: '/about',

@@ -6,7 +6,6 @@
                 ANIBOOM
 
             </div>
-            <button>Fetch</button>
         </div>
         <div class="paragraph bg-rose">
             <div class="textContainer">
@@ -27,7 +26,7 @@
     <div class="wrapThirdPage bg-rose">
         <h1 class="dark headingFont">Последние аниме</h1>
         <div class="flex">
-            <AnimeCardContainer />
+            <AnimeCardContainer :queryParam="queryParam"/>
             <News />
         </div>
     </div>
@@ -36,9 +35,11 @@
     </div>
 </template>
 
-<script setup >
-
-
+<script setup lang="ts">
+const queryParam: Object = {
+    filter: 'airing',
+    limit: 10
+ }
 </script>
 
 <style scoped>
