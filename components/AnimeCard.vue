@@ -1,6 +1,6 @@
 <template>
     <div class="content card">
-            <img class="img" src="/img/photo.jpg" alt="">
+            <img class="img" :src=anime.images.jpg.large_image_url alt="">
             <div class="main">
                 <div class="score">
                     9
@@ -9,7 +9,7 @@
                     </div>
                 </div>
                 <div class="titles headingFont">
-                    <h1>Naruto</h1>
+                    <h1>{{anime.title}}</h1>
                     <div class="small-titles">
                         <h4>Another title</h4>
                         <h4>Boruto</h4>
@@ -18,6 +18,16 @@
             </div>
         </div>
 </template>
+
+<script setup lang="ts">
+const route = useRoute()
+const id = route.params.id
+
+const {data: animes} = await useFetch(`https://api.jikan.moe/v4/anime/${id}`)
+const anime: any = (animes.value as any).data
+
+console.log()
+</script>
 
 <style scoped>
 .content {

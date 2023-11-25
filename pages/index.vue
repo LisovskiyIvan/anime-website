@@ -3,7 +3,7 @@
         <div class="headline bg-dark">
             <Navigation />
             <div class="heading rose">
-                ANIBOOM
+                ANIZIGA
 
             </div>
         </div>
@@ -38,8 +38,10 @@
 <script setup lang="ts">
 const queryParam: Object = {
     filter: 'airing',
-    limit: 10
+    limit: 10,
+    page: 1
  }
+ 
 </script>
 
 <style scoped>

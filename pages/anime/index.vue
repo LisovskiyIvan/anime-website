@@ -16,7 +16,8 @@
 <script setup lang="ts">
  const queryParam: Object = {
     filter: 'bypopularity',
-    limit: 25
+    limit: 25,
+    page: 1
  }
 </script>
 

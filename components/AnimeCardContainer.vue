@@ -23,20 +23,11 @@ const props: any = defineProps({
     }
 })
 const {queryParam} = props
-const { data: animes } = await useFetch(`https://api.jikan.moe/v4/top/anime?filter=${queryParam.filter}&limit=${queryParam.limit}`)
+const { data: animes } = await useFetch(`https://api.jikan.moe/v4/top/anime?filter=${queryParam.filter}&limit=${queryParam.limit}&page=${queryParam.page}&sfw=true`)
 const anime: any[] = (animes.value as any).data
 
 
 
-const anime2 = [
-    { title: 'Наруто', description: 'Тут будут описание какие-то к аниме много текста нужно регить как оно будет оказано Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, minima. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, deleniti', genres: ['Активность', 'Бой', 'Магия', 'Хентай'] },
-    { title: 'Блич', description: 'Тут будут описание какие-то к аниме много текста нужно регить как оно будет оказано Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, minima. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, deleniti', genres: ['Активность', 'Бой', 'Магия'] },
-    { title: 'Ванпис', description: 'Тут будут описание какие-то к аниме много текста нужно регить как оно будет оказано Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, minima. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, deleniti', genres: ['Активность', 'Бой', 'Магия'] },
-    { title: 'Зигхайл', description: 'Тут будут описание какие-то к аниме много текста нужно регить как оно будет оказано Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, minima. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, deleniti', genres: ['Активность', 'Бой', 'Магия'] },
-    { title: 'Гитлир', description: 'Тут будут описание какие-то к аниме много текста нужно регить как оно будет оказано Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, minima. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, deleniti', genres: ['Активность', 'Бой', 'Магия'] },
-    { title: 'Отто фон бисмарк', description: 'Тут будут описание какие-то к аниме много текста нужно регить как оно будет оказано Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, minima. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, deleniti', genres: ['Активность', 'Бой', 'Магия'] },
-    { title: 'Отуран', description: 'Тут будут описание какие-то к аниме много текста нужно регить как оно будет оказано Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, minima. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, deleniti', genres: ['Активность', 'Бой', 'Магия'] }
-]
 </script>
 
 <style scoped>
@@ -76,6 +67,7 @@ const anime2 = [
     height: 400px;
     border: 0;
     border-radius: 5px;
+    margin: 5px;
 }
 
 .genres {

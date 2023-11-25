@@ -19,7 +19,9 @@
                 }
             }" :grab-cursor="true" :space-between="10" :loop="false"
                 :autoplay="{ delay: 2500, disableOnInteraction: false }">
+                
                 <SwiperSlide v-for="item in anime" :key="item.mal_id">
+                    <NuxtLink :to="'/anime/'+ item.mal_id">
                     <div class="card">
                         <div class="cover">
                             <img class="img" :src="item.images.jpg.large_image_url" alt="">
@@ -27,8 +29,9 @@
                         <h4>{{ item.title }}</h4>
                         <p class="text">{{ item.synopsis }}</p>
                     </div>
-
+                    </NuxtLink>
                 </SwiperSlide>
+            
             </Swiper>
         </div>
     </div>
@@ -43,17 +46,7 @@ const { data: animes } = await useFetch('https://api.jikan.moe/v4/top/anime?filt
 const anime: any[] = (animes.value as any).data
 
 
-const swiperText = ref([
-    { title: 'Наруто', description: 'крутой чел стновится хокаге и вообще всех трахает', image: 'img/photo.jpg' },
-    { title: 'Блич', description: 'ичигша ищет банкай чтобы на его мече была киберзига', image: 'img/photo.jpg' },
-    { title: 'Ванпис', description: 'кто это смотрит я в ахуе столько серий и что там произошло?? хз', image: 'img/photo.jpg' },
-    { title: 'Xelfxtcndj k.,db yt gjvt[]', description: 'крутой чел стновится хокаге и вообще всех трахает', image: 'img/photo.jpg' },
-    { title: 'Ямамото', description: 'ичигша ищет банкай чтобы на его мече была киберзига', image: 'img/photo.jpg' },
-    { title: 'Моргенштерн', description: 'кто это смотрит я в ахуе столько серий и что там произошло?? хз', image: 'img/photo.jpg' },
-    { title: 'Ниггре', description: 'крутой чел стновится хокаге и вообще всех трахает', image: 'img/photo.jpg' },
-    { title: 'Вфыфыв', description: 'ичигша ищет банкай чтобы на его мече была киберзига', image: 'img/photo.jpg' },
-    { title: '8', description: 'кто это смотрит я в ахуе столько серий и что там произошло?? хз', image: 'img/photo.jpg' }
-])
+
 const modules = [Autoplay, Pagination]
 
 
@@ -69,10 +62,11 @@ const modules = [Autoplay, Pagination]
 .wrapper {
     display: flex;
     width: 90vw;
+    
 }
 
-SwiperSlide {
-    max-width: 300px;
+a:link {
+    text-decoration: none;
 }
 
 .img {
@@ -88,11 +82,13 @@ SwiperSlide {
 .card {
     width: 300px;
     height: 600px;
+    
 }
 
 h4,
 p {
     margin: 10px;
+    text-decoration: none;
 }
 .text {
     overflow: hidden;
