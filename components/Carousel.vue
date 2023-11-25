@@ -26,8 +26,8 @@
                         <div class="cover">
                             <img class="img" :src="item.images.jpg.large_image_url" alt="">
                         </div>
-                        <h4>{{ item.title }}</h4>
-                        <p class="text">{{ item.synopsis }}</p>
+                        <h4 class="font-bold text-lg">{{ item.title }}</h4>
+                        <p class="text text-md">{{ item.synopsis }}</p>
                     </div>
                     </NuxtLink>
                 </SwiperSlide>

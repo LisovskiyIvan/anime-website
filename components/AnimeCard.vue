@@ -1,14 +1,14 @@
 <template>
-    <div class="content card">
+    <div class="content card ">
             <img class="img" :src=anime.images.jpg.large_image_url alt="">
-            <div class="main">
-                <div class="score">
+            <div class="main ">
+                <div class="score ">
                     9
                     <div class="ten">
                         /10
                     </div>
                 </div>
-                <div class="titles headingFont">
+                <div class="titles headingFont text-2xl">
                     <h1>{{anime.title}}</h1>
                     <div class="small-titles">
                         <h4>Another title</h4>

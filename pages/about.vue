@@ -19,7 +19,7 @@
                             <span></span>
                             <span></span>
                             <span></span>
-                            <i class="fa fa-facebook" aria-hidden="true"><img src="github.png" alt=""></i>
+                            <i class="" aria-hidden="true"><img src="github.png" alt=""></i>
                         </NuxtLink>
                     </li>
                     <li>
@@ -28,7 +28,7 @@
                             <span></span>
                             <span></span>
                             <span></span>
-                            <i class="fa fa-twitter" aria-hidden="true"><img src="telegram.png" alt=""></i>
+                            <i class="" aria-hidden="true"><img src="telegram.png" alt=""></i>
                         </NuxtLink>
                     </li>
                     <li>
@@ -37,7 +37,7 @@
                             <span></span>
                             <span></span>
                             <span></span>
-                            <i class="fa fa-instagram" aria-hidden="true"><img src="github.png" alt=""></i>
+                            <i class="" aria-hidden="true"><img src="github.png" alt=""></i>
                         </NuxtLink>
                     </li>
                     <li>
@@ -46,7 +46,7 @@
                             <span></span>
                             <span></span>
                             <span></span>
-                            <i class="fa fa-google-plus" aria-hidden="true"><img src="telegram.png" alt=""></i>
+                            <i class="" aria-hidden="true"><img src="telegram.png" alt=""></i>
                         </NuxtLink>
                     </li>
                 </ul>
@@ -92,7 +92,8 @@
 img {
     width: 80px;
     position: relative;
-    top: -3%;
+    bottom: -10%;
+    left: 9%;
 }
 ul {
   position:absolute;

@@ -3,9 +3,9 @@
         <div class="animeContainer" v-for="item in anime" :key="item.mal_id">
             <img :src="item.images.jpg.large_image_url" class="img" alt="">
             <div class="descriptionContainer">
-                <h3 class="title headingFont">{{ item.title }}</h3>
-                <p class="textFont description">{{ item.synopsis }}</p>
-                <div class="genres">
+                <h3 class="title headingFont font-bold text-2xl">{{ item.title }}</h3>
+                <p class="textFont description text-md">{{ item.synopsis }}</p>
+                <div class="genres text-md">
                     <button type="button" v-for="genre in item.genres" class="genre btn btn-outline-secondary">
                         {{ genre.name }}
                     </button>

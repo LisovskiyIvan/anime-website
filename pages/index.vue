@@ -20,11 +20,11 @@
         </div>
     </div>
     <div class="wrapSecondPage bg-dark">
-        <h1 class="rose headingFont">Новинки недели</h1>
+        <h1 class="rose headingFont text-4xl">Новинки недели</h1>
         <Carousel />
     </div>
     <div class="wrapThirdPage bg-rose">
-        <h1 class="dark headingFont">Последние аниме</h1>
+        <h1 class="dark headingFont text-4xl">Последние аниме</h1>
         <div class="flex">
             <AnimeCardContainer :queryParam="queryParam"/>
             <News />

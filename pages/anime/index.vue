@@ -4,7 +4,7 @@
             <Navigation />
         </div>
         <div class="main-content bg-rose">
-            <h1 class="headingFont heading">Аниме</h1>
+            <h1 class="headingFont heading text-4xl">Аниме</h1>
             <div class="flex">
                 <AnimeCardContainer :queryParam="queryParam"/>
                 <Filters />
