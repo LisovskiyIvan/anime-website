@@ -1,14 +1,21 @@
 <template>
     <div class="card">
         <div class="animeContainer" v-for="item in anime" :key="item.mal_id">
-            <img :src="item.images.jpg.large_image_url" class="img" alt="">
+            <NuxtLink :to="'/anime/' + item.mal_id">
+                <img :src="item.images.jpg.large_image_url"
+                    class="img transition ease-in-out delay-50  hover:scale-105  duration-300 cursor-pointer" alt="">
+            </NuxtLink>
             <div class="descriptionContainer">
                 <h3 class="title headingFont font-bold text-2xl">{{ item.title }}</h3>
                 <p class="textFont description text-md">{{ item.synopsis }}</p>
                 <div class="genres text-md">
+
                     <button type="button" v-for="genre in item.genres" class="genre btn btn-outline-secondary">
-                        {{ genre.name }}
+                        <NuxtLink :to="`/anime/?genres=${genre.name}`">
+                            {{ genre.name }}
+                        </NuxtLink>
                     </button>
+
                 </div>
             </div>
         </div>
@@ -22,10 +29,16 @@ const props: any = defineProps({
         required: true
     }
 })
-const {queryParam} = props
+const { queryParam } = props
 const { data: animes } = await useFetch(`https://api.jikan.moe/v4/top/anime?filter=${queryParam.filter}&limit=${queryParam.limit}&page=${queryParam.page}&sfw=true`)
 const anime: any[] = (animes.value as any).data
 
+// const { data: animes } = await useFetch(`https://api.jikan.moe/v4/anime?status=complete&limit=10&page=1&sfw=true&genres=4`)
+// const anime: any[] = (animes.value as any).data
+
+// const route = useRoute()
+// const genre = route.query.genres
+// console.log(genre)
 
 
 </script>
@@ -68,6 +81,11 @@ const anime: any[] = (animes.value as any).data
     border: 0;
     border-radius: 5px;
     margin: 5px;
+    overflow: hidden;
+}
+
+.img:first-of-type {
+    margin-top: 10px;
 }
 
 .genres {

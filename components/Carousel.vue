@@ -24,10 +24,10 @@
                     <NuxtLink :to="'/anime/'+ item.mal_id">
                     <div class="card">
                         <div class="cover">
-                            <img class="img" :src="item.images.jpg.large_image_url" alt="">
+                            <img class="img transition ease-in-out delay-50  hover:scale-105  duration-300 cursor-pointer" :src="item.images.jpg.large_image_url" alt="">
                         </div>
                         <h4 class="font-bold text-lg">{{ item.title }}</h4>
-                        <p class="text text-md">{{ item.synopsis }}</p>
+                        <p class="text text-md leading-relaxed">{{ item.synopsis }}</p>
                     </div>
                     </NuxtLink>
                 </SwiperSlide>
@@ -70,13 +70,16 @@ a:link {
 }
 
 .img {
-    height: 400px;
-    width: 300px;
+    height: 390px;
+    width: 286px;
     position: relative;
-    left: -1px;
-    top: -1px;
+    left: 6px;
+    top: 5px;
     border: 0;
-    border-radius: 5px 5px 0px 0px;
+    border-radius: 5px;
+}
+.img:hover {
+    border-radius: 10px 10px 5px 5px ;
 }
 
 .card {
