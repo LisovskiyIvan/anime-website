@@ -22,19 +22,23 @@
     </div>
 </template>
 
-<script setup lang="ts">
-const props: any = defineProps({
+<script setup>
+const props = defineProps({
     queryParam: {
         type: Object,
         required: true
     }
 })
 const { queryParam } = props
-const { data: animes } = await useFetch(`https://api.jikan.moe/v4/top/anime?filter=${queryParam.filter}&limit=${queryParam.limit}&page=${queryParam.page}&sfw=true`)
-const anime: any[] = (animes.value as any).data
-
-// const { data: animes } = await useFetch(`https://api.jikan.moe/v4/anime?status=complete&limit=10&page=1&sfw=true&genres=4`)
+// const { data: animes } = await useFetch(`https://api.jikan.moe/v4/top/anime?filter=${queryParam.filter}&limit=${queryParam.limit}&page=${queryParam.page}&sfw=true`)
 // const anime: any[] = (animes.value as any).data
+
+const { data: animes} = await useFetch(`/api/anime?filter=${queryParam.filter}&limit=${queryParam.limit}&page=${queryParam.page}&sfw=true`)
+const value = animes.value
+const anime = value.info.data
+
+
+
 
 // const route = useRoute()
 // const genre = route.query.genres

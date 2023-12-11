@@ -19,16 +19,16 @@
                             <span></span>
                             <span></span>
                             <span></span>
-                            <i class="" aria-hidden="true"><img src="github.png" alt=""></i>
+                            <i class="" aria-hidden="true"><img src="/github.png" alt=""></i>
                         </NuxtLink>
                     </li>
                     <li>
-                        <NuxtLink target="_blank" class="twitter" to="https://t.me/daymewannabe">
+                        <NuxtLink target="_blank" class="twitter" to="https://t.me/daymedead">
                             <span></span>
                             <span></span>
                             <span></span>
                             <span></span>
-                            <i class="" aria-hidden="true"><img src="telegram.png" alt=""></i>
+                            <i class="" aria-hidden="true"><img src="/telegram.png" alt=""></i>
                         </NuxtLink>
                     </li>
                     <li>
@@ -37,7 +37,7 @@
                             <span></span>
                             <span></span>
                             <span></span>
-                            <i class="" aria-hidden="true"><img src="github.png" alt=""></i>
+                            <i class="" aria-hidden="true"><img src="/github.png" alt=""></i>
                         </NuxtLink>
                     </li>
                     <li>
@@ -46,7 +46,7 @@
                             <span></span>
                             <span></span>
                             <span></span>
-                            <i class="" aria-hidden="true"><img src="telegram.png" alt=""></i>
+                            <i class="" aria-hidden="true"><img src="/telegram.png" alt=""></i>
                         </NuxtLink>
                     </li>
                 </ul>

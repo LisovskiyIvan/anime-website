@@ -54,7 +54,6 @@ const id = route.params.id
 const { data: animes } = await useFetch(`https://api.jikan.moe/v4/anime/${id}`)
 const anime: any = (animes.value as any).data
 
-console.log()
 </script>
 
 <style scoped>

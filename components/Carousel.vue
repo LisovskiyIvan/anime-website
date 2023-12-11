@@ -37,13 +37,14 @@
     </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Autoplay, Pagination } from 'swiper/modules'
 import 'swiper/css';
 
-const { data: animes } = await useFetch('https://api.jikan.moe/v4/top/anime?filter=upcoming&limit=10')
-const anime: any[] = (animes.value as any).data
+const { data: animes} = await useFetch(`/api/anime?filter=upcoming&limit=10&page=1&sfw=true`)
+const value = animes.value
+const anime = value.info.data
 
 
 
