@@ -3,7 +3,7 @@
         <div class="animeContainer" v-for="item in anime" :key="item.mal_id">
             <NuxtLink :to="'/anime/' + item.mal_id">
                 <img :src="item.images.jpg.large_image_url"
-                    class="img transition ease-in-out delay-50  hover:scale-105  duration-300 cursor-pointer" alt="">
+                    class="img transition ease-in-out delay-50  hover:scale-105  duration-300 cursor-pointer" :alt="item.title">
             </NuxtLink>
             <div class="descriptionContainer">
                 <h3 class="title headingFont font-bold text-2xl">{{ item.title }}</h3>

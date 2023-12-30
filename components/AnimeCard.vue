@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <div class="flex flex-col items-center">
         <div class="content card">
-            <img class="img min-w-[300px] max-w-[400px]" :src=anime.images.jpg.large_image_url alt="">
+            <img class="img min-w-[400px] max-w-[550px] w-[550px]" :src=anime.images.jpg.large_image_url alt="">
             <div class="main">
                 <div class="score">
                     <img src="/star.png" alt="" class="w-6 self-baseline mr-2">
@@ -41,6 +41,9 @@
                 </div>
             </div>
         </div>
+        <div class="p-12">
+            <iframe :src="anime.trailer.embed_url+'&mute=1'" frameborder="0" width="1000" height="600"></iframe>
+        </div>
         <!-- <div> Тут будет трейлер
             {{ anime.trailer.embed_url }}
         </div> -->
@@ -59,16 +62,15 @@ const anime: any = (animes.value as any).data
 <style scoped>
 .content {
     margin-top: 50px;
-    width: 80%;
-    margin-left: 5%;
+    width: 90%;
     display: flex;
     flex-direction: row;
 }
 
 .img {
     padding: 5px;
-    height: 500px;
-    width: 400px;
+    height: 700px;
+    width: 550px;
     overflow: hidden;
     border-radius: 10px;
 }
