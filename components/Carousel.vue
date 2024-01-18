@@ -20,11 +20,11 @@
             }" :grab-cursor="true" :space-between="10" :loop="false"
                 :autoplay="{ delay: 2500, disableOnInteraction: false }">
                 
-                <SwiperSlide v-for="item in anime" :key="item.mal_id">
-                    <NuxtLink :to="'/anime/'+ item.mal_id">
+                <SwiperSlide v-for="item in anime" :key="item.id">
+                    <NuxtLink :to="'/anime/'+ item.id">
                     <div class="card">
                         <div class="cover">
-                            <img class="img transition ease-in-out delay-50  hover:scale-105  duration-300 cursor-pointer" :src="item.images.jpg.large_image_url" alt="">
+                            <img class="img transition ease-in-out delay-50  hover:scale-105  duration-300 cursor-pointer" :src="item.large_image_url" :alt="item.title">
                         </div>
                         <h4 class="font-bold text-lg">{{ item.title }}</h4>
                         <p class="text text-md leading-relaxed">{{ item.synopsis }}</p>
@@ -42,9 +42,8 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Autoplay, Pagination } from 'swiper/modules'
 import 'swiper/css';
 
-const { data: animes} = await useFetch(`/api/anime?filter=upcoming&limit=10&page=1&sfw=true`)
-const value = animes.value
-const anime = value.info.data
+const { data: animes} = await useFetch(`/api/anime?filter=upcoming&limit=10&page=2&sortBy=score&type=TV`)
+const anime = animes.value.data
 
 
 

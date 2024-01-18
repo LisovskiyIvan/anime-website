@@ -1,18 +1,21 @@
 <template>
-    <div class="card">
-        <div class="animeContainer" v-for="item in anime" :key="item.mal_id">
-            <NuxtLink :to="'/anime/' + item.mal_id">
-                <img :src="item.images.jpg.large_image_url"
-                    class="img transition ease-in-out delay-50  hover:scale-105  duration-300 cursor-pointer" :alt="item.title">
+    <div class="card mb-10">
+        <div class="animeContainer" v-for="item in anime" :key="item.id">
+            <NuxtLink :to="'/anime/' + item.id">
+                <img :src="item.large_image_url"
+                    class="img transition ease-in-out delay-50  hover:scale-105  duration-300 cursor-pointer"
+                    :alt="item.title">
             </NuxtLink>
             <div class="descriptionContainer">
                 <h3 class="title headingFont font-bold text-2xl">{{ item.title }}</h3>
+                <h6 class="title mt-0 headingFont font-bold text-lg">{{ item.title_english }}</h6>
+                <h6 class="title mt-0 headingFont font-bold text-lg">{{ item.title_japanese }}</h6>
                 <p class="textFont description text-md">{{ item.synopsis }}</p>
                 <div class="genres text-md">
 
                     <button type="button" v-for="genre in item.genres" class="genre btn btn-outline-secondary">
                         <NuxtLink :to="`/anime/?genres=${genre.name}`">
-                            {{ genre.name }}
+                            {{ genre.name_rus }}
                         </NuxtLink>
                     </button>
 
@@ -24,25 +27,13 @@
 
 <script setup>
 const props = defineProps({
-    queryParam: {
+    anime: {
         type: Object,
         required: true
     }
 })
-const { queryParam } = props
-// const { data: animes } = await useFetch(`https://api.jikan.moe/v4/top/anime?filter=${queryParam.filter}&limit=${queryParam.limit}&page=${queryParam.page}&sfw=true`)
-// const anime: any[] = (animes.value as any).data
+const { anime } = props
 
-const { data: animes} = await useFetch(`/api/anime?filter=${queryParam.filter}&limit=${queryParam.limit}&page=${queryParam.page}&sfw=true`)
-const value = animes.value
-const anime = value.info.data
-
-
-
-
-// const route = useRoute()
-// const genre = route.query.genres
-// console.log(genre)
 
 
 </script>

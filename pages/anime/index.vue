@@ -6,19 +6,26 @@
         <div class="main-content bg-rose">
             <h1 class="headingFont heading text-4xl pb-3">Аниме</h1>
             <div class="flex">
-                <AnimeCardContainer :queryParam="queryParam"/>
+                <AnimeCardContainer :anime="anime"/>
                 <Filters />
             </div>
         </div>
+        <Pagination />
     </div>
 </template>
 
-<script setup lang="ts">
- const queryParam: Object = {
-    filter: 'bypopularity',
-    limit: 25,
-    page: 1
+<script setup>
+ const queryParam = {
+    filter: 'finished',
+    limit: 20,
+    page: 1,
+    sortBy: 'score',
+    type: 'TV'
  }
+
+ const { data: animes } = await useFetch(`/api/anime?filter=${queryParam.filter}&limit=${queryParam.limit}&page=${queryParam.page}&sortBy=${queryParam.sortBy}&type=${queryParam.type}`)
+const anime = animes.value.data
+
 </script>
 
 <style scoped>

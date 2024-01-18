@@ -26,22 +26,33 @@
     <div class="wrapThirdPage bg-rose">
         <h1 class="dark headingFont text-4xl">Последние аниме</h1>
         <div class="flex">
-            <AnimeCardContainer :queryParam="queryParam"/>
-            <News />
+            <AnimeCardContainer :anime="anime"/>
+            <!-- <News /> -->
         </div>
     </div>
-    <div class="footer bg-dark">
+    <Pagination />
+    <!-- <div class="footer bg-dark">
         <Footer />
-    </div>
+    </div> -->
 </template>
 
-<script setup lang="ts">
-const queryParam: Object = {
-    filter: 'airing',
+<script setup>
+
+const queryParam = {
+    filter: 'ongoing',
     limit: 10,
-    page: 1
+    page: 1,
+    sortBy: 'score',
+    type: 'TV'
  }
  
+ const { data: animes } = await useFetch(`/api/anime?filter=${queryParam.filter}&limit=${queryParam.limit}&page=${queryParam.page}&sortBy=${queryParam.sortBy}&type=${queryParam.type}`)
+
+const anime = animes.value.data
+
+
+
+
 </script>
 
 <style scoped>

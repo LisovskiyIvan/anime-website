@@ -18,7 +18,7 @@
                             <label>
                                 <input type="checkbox">Запомнить меня
                             </label>
-                            <NuxtLink to="recover_password">Забыли пароль?</NuxtLink>
+                            <NuxtLink to="recover">Забыли пароль?</NuxtLink>
                         </div>
                         <button type="submit" class="btn btn-outline-primary">Войти</button>
                         <div class="login-register">

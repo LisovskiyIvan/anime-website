@@ -13,7 +13,17 @@
 </template>
 
 <script setup>
+// function randomInteger(min, max) {
+//   return Math.floor(Math.random() * (max - min + 1)) - min
+// }
 
+// const randPage = randomInteger(1, 240)
+// const randPageFetch = await useFetch(`http://localhost:8080/anime?filter=finished&page=${randPage}`)
+
+// const randAnime = randomInteger(1, 19)
+// const randAnimeId = randPageFetch.data.value
+// const id = randAnimeId.data[randAnime].id
+// console.log(id)
 
 const routes = [
   {
@@ -24,14 +34,10 @@ const routes = [
     path: '/anime',
     name: 'Аниме'
   },
-  {
-    path: '/random',
-    name: 'Случайное аниме'
-  },
-  {
-    path: '/discover',
-    name: 'Определить аниме'
-  },
+  // {
+  //   path: `/anime/` + id,
+  //   name: 'Случайное аниме'
+  // },
   {
     path: '/about',
     name: 'О нас'
