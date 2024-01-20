@@ -42,7 +42,7 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Autoplay, Pagination } from 'swiper/modules'
 import 'swiper/css';
 
-const { data: animes} = await useFetch(`/api/anime?filter=upcoming&limit=10&page=2&sortBy=score&type=TV`)
+const { data: animes} = await useFetch(`/api/anime?filter=upcoming&limit=12&page=1&sortBy=score&type=TV`)
 const anime = animes.value.data
 
 

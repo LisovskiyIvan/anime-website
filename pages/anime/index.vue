@@ -10,7 +10,7 @@
                 <Filters />
             </div>
         </div>
-        <Pagination />
+        <Pagination :lastPage="lastPage" />
     </div>
 </template>
 
@@ -25,7 +25,8 @@
 
  const { data: animes } = await useFetch(`/api/anime?filter=${queryParam.filter}&limit=${queryParam.limit}&page=${queryParam.page}&sortBy=${queryParam.sortBy}&type=${queryParam.type}`)
 const anime = animes.value.data
-
+const pagination = animes.value.pagination
+const lastPage = pagination.last_page
 </script>
 
 <style scoped>

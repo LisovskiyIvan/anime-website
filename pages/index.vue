@@ -30,7 +30,7 @@
             <!-- <News /> -->
         </div>
     </div>
-    <Pagination />
+    <Pagination :lastPage="lastPage" />
     <!-- <div class="footer bg-dark">
         <Footer />
     </div> -->
@@ -45,10 +45,18 @@ const queryParam = {
     sortBy: 'score',
     type: 'TV'
  }
- 
- const { data: animes } = await useFetch(`/api/anime?filter=${queryParam.filter}&limit=${queryParam.limit}&page=${queryParam.page}&sortBy=${queryParam.sortBy}&type=${queryParam.type}`)
+const route = useRoute()
+let currentPage
+currentPage = route.query.page
+
+
+
+ const { data: animes, refresh } = await useFetch(`/api/anime?filter=${queryParam.filter}&limit=${queryParam.limit}&page=${currentPage}&sortBy=${queryParam.sortBy}&type=${queryParam.type}`)
 
 const anime = animes.value.data
+const pagination = animes.value.pagination
+const lastPage = pagination.last_page
+
 
 
 
